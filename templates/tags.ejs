@@ -1,0 +1,43 @@
+<%
+var tagsColor = ['', 'primary', 'success', 'warning', 'info', 'error', 'banana', 'other_1', 'other_2', 'other_3', 'other_4'];
+var mytags = {};
+tags.forEach(function (tag) {
+    mytags[tag.name] = 0;
+})
+site.posts.forEach(function (post) {
+    if (!post.hideInList) {
+        post.tags.forEach(function (tag) {
+            mytags[tag.name] += 1;
+        })
+    }
+})
+tags.forEach(function (tag) {
+    tag.postCount = mytags[tag.name]
+})
+%>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><%- include('./blocks/head') %>
+</head>
+<body>
+<% if (site.customConfig.background){ %>
+    <%- include('./blocks/background') %>
+<% } %>
+<%- include('./blocks/header') %>
+<div id="content" class="container">
+    <div class="tags-content">
+        <h2><span class="vf-icons vf-icon-tags"></span>文章标签</h2>
+        <div class="row">
+            <% tags.forEach(function (tag) { %>
+                <a href="<%= tag.link %>"
+                   class="tags-tag i-tag i-tag-<%= tagsColor[Math.floor(Math.random() * 11)] %>"><%= tag.name %>
+                    <span><%= tag.postCount %></span></a>
+                <div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+    <%- include('./blocks/footer') %>
+</div>
+</body>
+</html>

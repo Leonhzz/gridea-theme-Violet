@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <%- include('./blocks/head') %>
+</head>
+<body>
+<% if (site.customConfig.background){ %>
+    <%- include('./blocks/background') %>
+<% } %>
+<%- include('./blocks/header') %>
+<div id="content" class="container">
+    <%- include('./blocks/archives-post-list') %>
+    <%- include('./blocks/pagination') %>
+    <%- include('./blocks/footer') %>
+</div>
+</body>
+</html>

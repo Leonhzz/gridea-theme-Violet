@@ -1,0 +1,10 @@
+<% if (pagination.prev || pagination.next) { %>
+    <div class="pagination-container">
+        <% if (pagination.prev) { %>
+            <a href="<%= pagination.prev %>" class="btn btn-outline-primary">上一页</a>
+        <% } %>
+        <% if (pagination.next) { %>
+            <a href="<%= pagination.next %>" class="btn btn-outline-primary">下一页</a>
+        <% } %>
+    </div>
+<% } %>

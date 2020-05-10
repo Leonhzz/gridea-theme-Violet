@@ -1,0 +1,10 @@
+<% if(typeof site.customConfig.notice !== 'undefined' && site.customConfig.notice){ %>
+    <div class="bulletin-board">
+        <div class="bulletin-board-title">
+            <span class="vf-icons vf-icon-laba" style="margin-right: 5px;color: #ed4014"></span>公告
+        </div>
+        <div class="bulletin-board-content">
+            <%- site.customConfig.notice %>
+        </div>
+    </div>
+<% } %>

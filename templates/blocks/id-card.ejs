@@ -1,0 +1,36 @@
+<%
+var notInListPostNum = 0;
+site.posts.forEach(function (post) {
+    if (post.hideInList) {
+        notInListPostNum++;
+    }
+})
+%>
+<div class="id_card i-card">
+    <div class="id_card-avatar"
+         style="background-image: url(<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>)">
+    </div>
+    <h1 class="id_card-title">
+        <%= themeConfig.siteName %>
+    </h1>
+    <h2 class="id_card-description">
+        <%= themeConfig.siteDescription %>
+    </h2>
+    <ul class="id_card-site-info row">
+        <li class="col-6"><a href="<%= themeConfig.domain %>/archives">文章</a></li>
+        <li class="col-6"><a href="<%= themeConfig.domain %>/tags">标签</a></li>
+        <li class="col-6"><a href="<%= themeConfig.domain %>/archives"><%= site.posts.length-notInListPostNum%></a></li>
+        <li class="col-6"><a href="<%= themeConfig.domain %>/tags"><%= site.tags.length%></a></li>
+    </ul>
+    <div class="id_card-sns">
+        <% if(site.customConfig.socialAccounts){ %> 
+        <% site.customConfig.socialAccounts.forEach(function (socialAccount) { %>
+            <a href="<%= socialAccount.accountLink %>" target="_blank" title="<%= socialAccount.accountName %>"><span
+                        class="vf-icons vf-icon-<%= socialAccount.accountName %>"></span></a>
+        <% }) %>
+        <% } %> 
+        <% if(site.customConfig.rss) { %>
+                <a href="<%= themeConfig.domain %>/atom.xml" target="_blank" title="RSS"><span class="vf-icons vf-icon-rss"></span></a>
+        <% } %>
+    </div>
+</div>

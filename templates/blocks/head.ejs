@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= site.themeConfig.siteName %></title>
+<link rel="shortcut icon" href="<%= themeConfig.domain %>/favicon.ico?v=<%= site.utils.now %>">
+<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+<link href="<%= site.customConfig.iconAddress %>" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="<%= themeConfig.domain%>/media/css/prism-<%- site.customConfig.codeTheme %>.css">
+<style>
+    @font-face {
+        font-weight: normal;
+        font-style: normal;
+        font-family: 'charganolton';
+        src: url('<%= themeConfig.domain %>/media/fonts/Charganolton.ttf');
+    }
+    @font-face {
+        font-weight: normal;
+        font-style: normal;
+        font-family: 'JetBrainsMono';
+        src: url('<%= themeConfig.domain %>/media/fonts/JetBrainsMono-Regular.eot');
+        src: url('<%= themeConfig.domain %>/media/fonts/JetBrainsMono-Regular.eot?#iefix') format('embedded-opentype'),
+        url('<%= themeConfig.domain %>/media/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+        url('<%= themeConfig.domain %>/media/fonts/JetBrainsMono-Regular.woff') format('woff'),
+        url('<%= themeConfig.domain %>/media/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-weight: bold;
+        font-style: normal;
+        font-family: 'JetBrainsMono';
+        src: url('<%= themeConfig.domain %>/media/fonts/JetBrainsMono-Bold.eot');
+        src: url('<%= themeConfig.domain %>/media/fonts/JetBrainsMono-Bold.eot?#iefix') format('embedded-opentype'),
+        url('<%= themeConfig.domain %>/media/fonts/JetBrainsMono-Bold.woff2') format('woff2'),
+        url('<%= themeConfig.domain %>/media/fonts/JetBrainsMono-Bold.woff') format('woff'),
+        url('<%= themeConfig.domain %>/media/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+    }
+</style>
+<link rel="stylesheet" href="<%= themeConfig.domain %>/styles/main.css">
+<% if(site.customConfig.valine){ %>
+    <script src="https://cdn.bootcdn.net/ajax/libs/valine/1.4.14/Valine.min.js"></script>
+<% } %>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>

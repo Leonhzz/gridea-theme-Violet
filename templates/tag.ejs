@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><%- include('./blocks/head') %>
+</head>
+<body>
+<% if (site.customConfig.background){ %>
+    <%- include('./blocks/background') %>
+<% } %>
+<%- include('./blocks/header') %>
+<div id="content" class="container">
+        <div class="row">
+            <div class="col-sm-100 col-lg-9 index-post-list">
+                <%- include('./blocks/post-list') %>
+            </div>
+            <div class="col-lg-3">
+                <%- include('./blocks/id-card.ejs') %>
+                <%- include('./blocks/bulletin-board') %>
+            </div>
+        </div>
+        <%- include('./blocks/footer') %>
+</div>
+</body>
+</html>

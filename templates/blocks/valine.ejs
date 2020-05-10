@@ -1,0 +1,22 @@
+<script>
+    new Valine({
+        el: '#valinecomments',
+        appId: '<%= site.customConfig.appId %>',
+        appKey: '<%= site.customConfig.appKey %>',
+        placeholder: '<%= site.customConfig.placeholder %>',
+        pageSize: <%= site.customConfig.pageSize %>,
+        lang: '<%= site.customConfig.lang %>',
+        <% if(site.customConfig.functionSwitch) { %>
+        visitor: <%= site.customConfig.functionSwitch[0].visitor %>,
+        highlight: <%= site.customConfig.functionSwitch[0].highlight %>,
+        avatarForce: <%= site.customConfig.functionSwitch[0].avatarForce %>,
+        recordIP: <%= site.customConfig.functionSwitch[0].recordIP %>,
+        enableQQ: <%= site.customConfig.functionSwitch[0].enableQQ %>,
+        <% } %>
+        <% if(site.customConfig.emojiCDN) { %>
+        emojiCDN: '<%= site.customConfig.emojiCDN %>',
+        emojiMaps: {<%- site.customConfig.emojiMaps %>},
+        <% } %>
+        requiredFields: <%- site.customConfig.requiredField %>
+    })
+</script>

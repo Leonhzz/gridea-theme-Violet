@@ -1,0 +1,430 @@
+{
+  "name": "Violet",
+  "version": "1.0.0",
+  "author": "violetfreesia",
+  "repository": "https://github.com/violetfreesia/gridea-theme-Violet",
+  "customConfig": [
+    {
+      "name": "background",
+      "label": "网站动态背景",
+      "group": "通用项",
+      "value": true,
+      "type": "switch"
+    },
+    {
+      "name": "tagsechart",
+      "label": "侧边栏显示标签分布",
+      "group": "首页",
+      "value": true,
+      "type": "switch"
+    },
+    {
+      "name": "notice",
+      "label": "网站公告",
+      "group": "首页",
+      "value": "",
+      "type": "textarea",
+      "note": "不填写则不显示"
+    },
+    {
+      "name": "homePicturePosition",
+      "label": "首页文章列表图片位置",
+      "group": "首页",
+      "value": -1,
+      "type": "radio",
+      "options": [
+        {
+          "label": "左",
+          "value": -1
+        },
+        {
+          "label": "右",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "rss",
+      "label": "显示RSS图标",
+      "group": "首页",
+      "value": true,
+      "type": "switch"
+    },
+    {
+      "name": "socialAccounts",
+      "label": "社交信息",
+      "group": "首页",
+      "value": [
+        {
+          "accountName": "github",
+          "accountLink": "//github.com/violetfreesia"
+        }
+      ],
+      "type": "array",
+      "arrayItems": [
+        {
+          "name": "accountName",
+          "label": "账户图标",
+          "value": "github",
+          "type": "select",
+          "options": [
+            {
+              "label": "GitHub",
+              "value": "github"
+            },
+            {
+              "label": "Gitee",
+              "value": "gitee"
+            },
+            {
+              "label": "CSDN",
+              "value": "weibo"
+            },
+            {
+              "label": "邮箱",
+              "value": "email"
+            },
+            {
+              "label": "BiliBili",
+              "value": "bilibili"
+            },
+            {
+              "label": "微博",
+              "value": "weibo"
+            },
+            {
+              "label": "知乎",
+              "value": "zhihu"
+            },
+            {
+              "label": "网易云音乐",
+              "value": "163music"
+            },
+            {
+              "label": "Facebook",
+              "value": "facebook"
+            },
+            {
+              "label": "Youtube",
+              "value": "youtube"
+            },
+            {
+              "label": "Twitter",
+              "value": "twitter"
+            }
+          ]
+        },
+        {
+          "name": "accountLink",
+          "label": "链接地址",
+          "value": "",
+          "type": "input",
+          "note": "请填写完整链接(以\"https://\",\"http://\"或\"//\"开头)"
+        }
+      ]
+    },
+    {
+      "name": "codeTheme",
+      "label": "文章代码块高亮主题",
+      "group": "文章页",
+      "value": 0,
+      "type": "radio",
+      "options": [
+        {
+          "label": "默认",
+          "value": 0
+        },
+        {
+          "label": "SOLARIZEDLIGHT",
+          "value": 1
+        },
+        {
+          "label": "OKAIDIA",
+          "value": 3
+        },
+        {
+          "label": "TWILIGHT",
+          "value": 4
+        },
+        {
+          "label": "TOMOTTOW NIGHT",
+          "value": 5
+        }
+      ]
+    },{
+      "name": "codeLineNumber",
+      "label": "显示代码行号",
+      "group": "文章页",
+      "value": true,
+      "type": "switch"
+    },
+    {
+      "name": "friendPosition",
+      "label": "友情链接位置",
+      "group": "友情链接",
+      "value": 0,
+      "type": "radio",
+      "options": [
+        {
+          "label": "关闭",
+          "value": 0
+        },
+        {
+          "label": "显示在关于页面",
+          "value": 1
+        },
+        {
+          "label": "显示在新页面",
+          "value": 2
+        }
+      ],
+      "note": "选择\"显示在新页面\"需要在菜单栏中添加Link为\"/friends\"的菜单项"
+    },
+    {
+      "name": "friends",
+      "label": "友情链接",
+      "group": "友情链接",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        {
+          "label": "名称",
+          "name": "siteName",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "主页",
+          "name": "siteLink",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "Logo",
+          "name": "siteLogo",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "描述",
+          "name": "description",
+          "type": "textarea",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "name": "valine",
+      "label": "启用Valine评论系统",
+      "group": "Valine评论系统",
+      "value": false,
+      "type": "switch",
+      "note": "开启后下面的AppID与AppKey必填,其他是个性化配置,选填"
+    },
+    {
+      "name": "appId",
+      "label": "AppID",
+      "group": "Valine评论系统",
+      "value": "",
+      "type": "input",
+      "note": "LeanCloud应用的AppID"
+    },
+    {
+      "name": "appKey",
+      "label": "AppKey",
+      "group": "Valine评论系统",
+      "value": "",
+      "type": "input",
+      "note": "LeanCloud应用的AppKey"
+    },
+    {
+      "name": "placeholder",
+      "label": "评论框提示语句",
+      "group": "Valine评论系统",
+      "value": "畅所欲言吧,可以留下联系方式哦~",
+      "type": "textarea",
+      "note": "输入新的提示语句吧~"
+    },
+    {
+      "name": "pageSize",
+      "label": "评论每页条数",
+      "group": "Valine评论系统",
+      "value": 10,
+      "type": "select",
+      "options": [
+        {
+          "label": "5",
+          "value": 5
+        },
+        {
+          "label": "6",
+          "value": 6
+        },
+        {
+          "label": "7",
+          "value": 7
+        },
+        {
+          "label": "8",
+          "value": 8
+        },
+        {
+          "label": "9",
+          "value": 9
+        },
+        {
+          "label": "10",
+          "value": 10
+        },
+        {
+          "label": "11",
+          "value": 11
+        },
+        {
+          "label": "12",
+          "value": 12
+        },
+        {
+          "label": "13",
+          "value": 13
+        },
+        {
+          "label": "14",
+          "value": 14
+        },
+        {
+          "label": "15",
+          "value": 15
+        },
+        {
+          "label": "16",
+          "value": 16
+        },
+        {
+          "label": "17",
+          "value": 17
+        },
+        {
+          "label": "18",
+          "value": 18
+        },
+        {
+          "label": "19",
+          "value": 19
+        },
+        {
+          "label": "20",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "name": "lang",
+      "label": "语言",
+      "group": "Valine评论系统",
+      "value": "zh-CN",
+      "type": "radio",
+      "options": [
+        {
+          "label": "简体中文",
+          "value": "zh-CN"
+        },
+        {
+          "label": "繁體中文",
+          "value": "zh-TW"
+        },
+        {
+          "label": "English",
+          "value": "en"
+        }
+      ]
+    },
+    {
+      "name": "emojiCDN",
+      "label": "自定义表情包CDN",
+      "group": "Valine评论系统",
+      "value": "",
+      "type": "input",
+      "note": "填了这个还需要填下面的表情包映射哦"
+    },
+    {
+      "name": "emojiMaps",
+      "label": "自定义表情包映射",
+      "group": "Valine评论系统",
+      "value": "",
+      "type": "textarea",
+      "note": "如:\"tv_doge\": \"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png\"多个映射用\",\"隔开"
+    },
+    {
+      "name": "requiredField",
+      "label": "评论权限",
+      "group": "Valine评论系统",
+      "value": "[]",
+      "type": "radio",
+      "options": [
+        {
+          "label": "允许匿名",
+          "value": "[]"
+        },
+        {
+          "label": "昵称必填",
+          "value": "['nick']"
+        },
+        {
+          "label": "昵称和邮箱必填",
+          "value": "['nick','mail']"
+        }
+      ]
+    },
+    {
+      "name": "functionSwitch",
+      "label": "其他功能开关",
+      "group": "Valine评论系统",
+      "value": [],
+      "type": "array",
+      "arrayItems": [
+        {
+          "name": "visitor",
+          "label": "文章访问量统计",
+          "value": false,
+          "type": "switch"
+        },
+        {
+          "name": "highlight",
+          "label": "评论代码高亮",
+          "value": true,
+          "type": "switch"
+        },
+        {
+          "name": "avatarForce",
+          "label": "最新头像",
+          "value": false,
+          "type": "switch",
+          "note": "每次访问强制拉取最新的评论列表头像"
+        },
+        {
+          "name": "enableQQ",
+          "label": "QQ头像",
+          "value": false,
+          "type": "switch",
+          "note": "开启后,昵称框输入QQ会自动获取QQ昵称和QQ头像"
+        },
+        {
+          "name": "recordIP",
+          "label": "记录评论者IP",
+          "value": false,
+          "type": "switch"
+        }
+      ],
+      "note": "点击添加配置,只有第一组配置会生效哦"
+    },
+    {
+      "name": "iconAddress",
+      "label": "图标库地址",
+      "group": "开发者选项",
+      "value": "//at.alicdn.com/t/font_1806605_dyr0fqhe85.css",
+      "type": "input",
+      "note": "别动它哦"
+    }
+  ]
+}
