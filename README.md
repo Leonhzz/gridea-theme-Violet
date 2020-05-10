@@ -1,6 +1,4 @@
-# gridea-theme-Violet
-
-### gridea主题,基于lemon改写,参考lemon样式
+# Gridea主题,基于lemon改写,参考lemon样式
 
 - 2020-5-10	v1.0.0
 
