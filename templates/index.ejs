@@ -18,6 +18,9 @@
             <% if(site.customConfig.tagsechart){ %>
                 <%- include('./blocks/tagschart') %>
             <% } %>
+            <% if(site.customConfig.busuanzi && site.customConfig.busuanzishow){ %>
+                <%- include('./blocks/site-stats-card') %>
+            <% } %>
         </div>
     </div>
     <%- include('./blocks/footer') %>

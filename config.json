@@ -12,8 +12,22 @@
       "type": "switch"
     },
     {
+      "name": "busuanzi",
+      "label": "网站统计(不蒜子)",
+      "group": "通用项",
+      "value": true,
+      "type": "switch"
+    },
+    {
       "name": "tagsechart",
       "label": "侧边栏显示标签分布",
+      "group": "首页",
+      "value": true,
+      "type": "switch"
+    },
+    {
+      "name": "busuanzishow",
+      "label": "侧边栏显示网站统计",
       "group": "首页",
       "value": true,
       "type": "switch"

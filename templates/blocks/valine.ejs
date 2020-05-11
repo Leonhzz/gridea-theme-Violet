@@ -6,7 +6,7 @@
         placeholder: '<%= site.customConfig.placeholder %>',
         pageSize: <%= site.customConfig.pageSize %>,
         lang: '<%= site.customConfig.lang %>',
-        <% if(site.customConfig.functionSwitch) { %>
+        <% if(site.customConfig.functionSwitch.lenght>0) { %>
         visitor: <%= site.customConfig.functionSwitch[0].visitor %>,
         highlight: <%= site.customConfig.functionSwitch[0].highlight %>,
         avatarForce: <%= site.customConfig.functionSwitch[0].avatarForce %>,
